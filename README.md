@@ -1,5 +1,12 @@
 # NDI Telestrator
 
+Note
+-------
+This program has issues running on Intel intergrated gpus. In my testing it works fine with AMD Intergrated gpus. I have tested it on bolth AMD and Nvidia gpus and it works fine. 
+
+
+About
+-------
 > Fork of featherbear's [NDI Telestrator](https://github.com/featherbear/NDI-Telestrator)
 
 A application that lets you draw on an NDI sorce. It outputs just the ink to a NDI endpoint named `Telestrator`. Questions add me on discord `Tdash#9829`
