@@ -11,6 +11,11 @@ About
 
 A application that lets you draw on an NDI sorce. It outputs just the ink to a NDI endpoint named `Telestrator`. Questions add me on discord `Tdash#9829`
 
+TODO
+-------
+* Add Vmix Replay shortcuts for play, pause, reverse and playback speed.
+* Make a wiki.
+
 
 
 Authors
