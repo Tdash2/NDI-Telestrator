@@ -1,20 +1,14 @@
 # NDI Telestrator
 
-> Fork of gbraad's [NDI Whiteboard](https://github.com/gbraad/NDI-Whiteboard)
+> Fork of featherbear's [NDI Telestrator](https://github.com/featherbear/NDI-Telestrator)
 
-A whiteboard application which outputs to NDI endpoint named `Telestrator`.
+A application that lets you draw on an NDI sorce. It outputs just the ink to a NDI endpoint named `Telestrator`. Questions add me on discord `Tdash#9829`
 
-✔️ Supports transparent/alpha output over NDI  
-✔️ Supports screenshots (JPG / PNG [with alpha])  
-✔️ Supports multi-layer drawing imports/exports  
-✔️ Multiple ink colours and backgrounds  
-✔️ Supports an NDI source as a background
 
-<!-- ![Example](https://raw.githubusercontent.com/gbraad/NDI-Whiteboard/master/Assets/example.png) -->
 
 Authors
 -------
-
+* [Tj Doescher](https://github.com/Tdash2)
 * [Andrew Wong](https://github.com/featherbear)
 * [Gerard Braad](https://github.com/gbraad/) (original author)
 
