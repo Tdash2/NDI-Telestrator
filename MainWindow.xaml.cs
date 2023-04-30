@@ -36,6 +36,7 @@ namespace NDI_Telestrator
             InkControls.whiteboard = theWhiteboard;
             optionsDialogue.whiteboard = theWhiteboard;
             optionsDialogue.background = theBackground;
+            theWhiteboard.SetPenColour(Colors.Yellow);
 
 
 
