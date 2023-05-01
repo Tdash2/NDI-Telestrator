@@ -1,20 +1,26 @@
 # NDI Telestrator
 
-> Fork of gbraad's [NDI Whiteboard](https://github.com/gbraad/NDI-Whiteboard)
+Note
+-------
+This program has issues running on Intel intergrated gpus. In my testing it works fine with AMD Intergrated gpus. I have tested it on bolth AMD and Nvidia gpus and it works fine. 
 
-A whiteboard application which outputs to NDI endpoint named `Telestrator`.
 
-✔️ Supports transparent/alpha output over NDI  
-✔️ Supports screenshots (JPG / PNG [with alpha])  
-✔️ Supports multi-layer drawing imports/exports  
-✔️ Multiple ink colours and backgrounds  
-✔️ Supports an NDI source as a background
+About
+-------
+> Fork of featherbear's [NDI Telestrator](https://github.com/featherbear/NDI-Telestrator)
 
-<!-- ![Example](https://raw.githubusercontent.com/gbraad/NDI-Whiteboard/master/Assets/example.png) -->
+A application that lets you draw on an NDI sorce. It outputs just the ink to a NDI endpoint named `Telestrator`. Questions add me on discord `Tdash#9829`
+
+TODO
+-------
+* Add Vmix Replay shortcuts for play, pause, reverse and playback speed.
+* Make a wiki.
+
+
 
 Authors
 -------
-
+* [Tj Doescher](https://github.com/Tdash2)
 * [Andrew Wong](https://github.com/featherbear)
 * [Gerard Braad](https://github.com/gbraad/) (original author)
 

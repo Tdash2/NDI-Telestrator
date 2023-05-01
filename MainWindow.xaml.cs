@@ -45,6 +45,7 @@ namespace NDI_Telestrator
             InkControls.whiteboard = theWhiteboard;
             optionsDialogue.whiteboard = theWhiteboard;
             optionsDialogue.background = theBackground;
+            theWhiteboard.SetPenColour(Colors.Yellow);
 
             theWhiteboard.SetPenColour(FromName(ConfigurationManager.AppSettings["Default_Pen_Color"]));
             theWhiteboard.SetPenThickness(double.Parse(ConfigurationManager.AppSettings["Default_Pen_Size"]));
