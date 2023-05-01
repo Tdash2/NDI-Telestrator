@@ -206,6 +206,7 @@ namespace NDI_Telestrator
         public static void createNewLayer()
         {
             whiteboard.addNewLayer();
+
         }
 
         public static void setActiveLayer(int index)

@@ -10,6 +10,7 @@ using Forms = System.Windows.Forms;
 using System.Net.Http;
 using System.Threading.Tasks;
 using ControlzEx.Standard;
+using System.Configuration;
 
 namespace NDI_Telestrator
 {
@@ -22,9 +23,17 @@ namespace NDI_Telestrator
         {
             ndi.requestFrameUpdate();
         }
-
+        public static Color FromName(String name)
+        {
+            var color_props = typeof(Colors).GetProperties();
+            foreach (var c in color_props)
+                if (name.Equals(c.Name, StringComparison.OrdinalIgnoreCase))
+                    return (Color)c.GetValue(new Color(), null);
+            return Colors.Transparent;
+        }
         static async Task GetVmix(String url)
         {
+
             var client = new HttpClient();
 
             var result = await client.GetAsync(url);
@@ -37,7 +46,8 @@ namespace NDI_Telestrator
             optionsDialogue.whiteboard = theWhiteboard;
             optionsDialogue.background = theBackground;
 
-
+            theWhiteboard.SetPenColour(FromName(ConfigurationManager.AppSettings["Default_Pen_Color"]));
+            theWhiteboard.SetPenThickness(double.Parse(ConfigurationManager.AppSettings["Default_Pen_Size"]));
 
 
             // Send background updates every 250ms
@@ -73,7 +83,7 @@ namespace NDI_Telestrator
 
         private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
-           
+
             switch (e.Key)
             {
 
@@ -145,15 +155,15 @@ namespace NDI_Telestrator
 
 
                 case Key.D1:
-                    GetVmix("http://10.244.0.5/?shortcut=02cfc5c9-95e8-4e9e-92be-cd9401b7ddcd");
-                    Console.WriteLine("Play");
+                    String play = ConfigurationManager.AppSettings["Play-Pause"];
+                    GetVmix(play);
+                    Console.WriteLine("Play-Pause");
                     theWhiteboard.Clear();
                     break;
+
                 case Key.D2:
-
-                    GetVmix("http://10.244.0.5/?shortcut=35af7592-d27b-47c8-aa51-0153f1b01e42");
+                    GetVmix(ConfigurationManager.AppSettings["Reverse"]);
                     Console.WriteLine("Reverse");
-
                     break;
             }
         }

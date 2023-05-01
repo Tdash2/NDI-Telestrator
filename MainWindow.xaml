@@ -8,7 +8,7 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:whiteboard="clr-namespace:NDI_Telestrator"
     x:Name="this"
-    Title="Warrior Media Telestrator"
+    Title="NDI Telestrator"
     Width="1280"
     Height="800"
     Background="Purple"
@@ -90,151 +90,17 @@
                 <XAMLConverters:ColorToSolidColorBrushNoTransparent x:Key="ColorToSolidColorBrushNoTransparent" />
             </StackPanel.Resources>
 
-            <Border BorderBrush="Transparent" BorderThickness="0,0,0,3">
-                <Button
-                    Width="30"
-                    Height="32"
-                    VerticalAlignment="Bottom"
-                    materialDesign:RippleAssist.IsCentered="True"
-                    Click="Btn_Screenshot_Click"
-                    ClipToBounds="True"
-                    Style="{StaticResource MaterialDesignToolForegroundButton}">
-                    <materialDesign:PackIcon Kind="Camera" />
-                </Button>
-            </Border>
-
-            <Border BorderBrush="Transparent" BorderThickness="0,0,0,3">
-                <Button
-                    Width="30"
-                    Height="32"
-                    VerticalAlignment="Bottom"
-                    materialDesign:RippleAssist.IsCentered="True"
-                    Click="Btn_Delete_Click"
-                    ClipToBounds="True"
-                    IsEnabled="{Binding hasStrokes, ElementName=theWhiteboard}"
-                    Style="{StaticResource MaterialDesignToolForegroundButton}">
-                    <materialDesign:PackIcon Kind="Delete" />
-                </Button>
-            </Border>
-
-            <Border BorderBrush="Transparent" BorderThickness="0,0,0,3">
-                <Button
-                    Width="30"
-                    Height="32"
-                    VerticalAlignment="Bottom"
-                    materialDesign:RippleAssist.IsCentered="True"
-                    Click="Btn_Undo_Click"
-                    ClipToBounds="True"
-                    IsEnabled="{Binding hasUndoContent, ElementName=theWhiteboard}"
-                    Style="{StaticResource MaterialDesignToolForegroundButton}">
-                    <materialDesign:PackIcon Kind="Undo" />
-                </Button>
-            </Border>
-
-            <Border BorderBrush="Transparent" BorderThickness="0,0,0,3">
-                <Button
-                    Width="30"
-                    Height="32"
-                    VerticalAlignment="Bottom"
-                    materialDesign:RippleAssist.IsCentered="True"
-                    Click="Btn_Redo_Click"
-                    ClipToBounds="True"
-                    IsEnabled="{Binding hasRedoContent, ElementName=theWhiteboard}"
-                    Style="{StaticResource MaterialDesignToolForegroundButton}">
-                    <materialDesign:PackIcon Kind="Redo" />
-                </Button>
-            </Border>
-
-            <Controls:ColorPicker
-                Controls:TextBoxHelper.ButtonWidth="0"
-                BorderThickness="0"
-                DefaultColor="Transparent"
-                SelectedColorChanged="onClrPickBackground"
-                Style="{StaticResource ToolbarButtonStyle}">
-
-                <Controls:ColorPicker.SelectedColorTemplate>
-                    <DataTemplate>
-                        <materialDesign:PackIcon Foreground="{Binding Converter={StaticResource ColorToSolidColorBrushNoTransparent}}" Kind="Image" />
-                    </DataTemplate>
-                </Controls:ColorPicker.SelectedColorTemplate>
-            </Controls:ColorPicker>
-
-            <!--  https://github.com/MahApps/MahApps.Metro/blob/077161c41be0e74f81a0ad150a12495bd8b2237d/src/MahApps.Metro/Themes/ColorPicker/ColorPicker.xaml#L96  -->
-            <Controls:ColorPicker
-                Controls:TextBoxHelper.ButtonWidth="0"
-                BorderThickness="0"
-                DefaultColor="Black"
-                SelectedColorChanged="onClrPickPen"
-                Style="{StaticResource ToolbarButtonStyle}">
-
-                <Controls:ColorPicker.SelectedColorTemplate>
-                    <DataTemplate>
-                        <materialDesign:PackIcon Foreground="{Binding Converter={StaticResource ColorToSolidColorBrushNoTransparent}}" Kind="Pencil" />
-                    </DataTemplate>
-                </Controls:ColorPicker.SelectedColorTemplate>
-            </Controls:ColorPicker>
-
-            <Controls:DropDownButton
-                HorizontalAlignment="Center"
-                HorizontalContentAlignment="Center"
-                ArrowVisibility="Collapsed"
-                BorderThickness="0"
-                DataContext="{Binding handleSelectThickness, ElementName=this}"
-                Style="{StaticResource ToolbarButtonStyle}">
-                <Controls:DropDownButton.Icon>
-                    <materialDesign:PackIcon Kind="Circle" />
-                </Controls:DropDownButton.Icon>
-                <Controls:DropDownButton.ItemContainerStyle>
-                    <Style BasedOn="{StaticResource {x:Type MenuItem}}" TargetType="{x:Type MenuItem}">
-                        <Setter Property="Command" Value="{Binding DataContext}" />
-                        <Setter Property="Width" Value="90" />
-                        <Setter Property="CommandParameter" Value="{Binding Tag}" />
-                    </Style>
-                </Controls:DropDownButton.ItemContainerStyle>
-                <Controls:DropDownButton.Resources>
-
-                    <!--  materialDesign:PackIcon  -->
-                    <Style x:Key="IconStyle" TargetType="{x:Type materialDesign:PackIcon}">
-                        <Setter Property="Width" Value="30" />
-                        <Setter Property="Height" Value="32" />
-                        <Setter Property="VerticalAlignment" Value="Bottom" />
-                        <Setter Property="ClipToBounds" Value="True" />
-                        <Setter Property="Foreground" Value="Black" />
-                        <Setter Property="Kind" Value="Circle" />
-                        <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
-                    </Style>
-                </Controls:DropDownButton.Resources>
-                <Controls:DropDownButton.Items>
-
-                    <materialDesign:PackIcon Style="{StaticResource IconStyle}" Tag="1.0">
-                        <materialDesign:PackIcon.RenderTransform>
-                            <ScaleTransform ScaleX="0.2" ScaleY="0.2" />
-                        </materialDesign:PackIcon.RenderTransform>
-                    </materialDesign:PackIcon>
-
-                    <materialDesign:PackIcon Style="{StaticResource IconStyle}" Tag="2.0">
-                        <materialDesign:PackIcon.RenderTransform>
-                            <ScaleTransform ScaleX="0.4" ScaleY="0.4" />
-                        </materialDesign:PackIcon.RenderTransform>
-                    </materialDesign:PackIcon>
 
 
-                    <materialDesign:PackIcon Style="{StaticResource IconStyle}" Tag="3.0">
-                        <materialDesign:PackIcon.RenderTransform>
-                            <ScaleTransform ScaleX="0.6" ScaleY="0.6" />
-                        </materialDesign:PackIcon.RenderTransform>
-                    </materialDesign:PackIcon>
 
-                    <materialDesign:PackIcon Style="{StaticResource IconStyle}" Tag="4.0">
-                        <materialDesign:PackIcon.RenderTransform>
-                            <ScaleTransform ScaleX="0.8" ScaleY="0.8" />
-                        </materialDesign:PackIcon.RenderTransform>
-                    </materialDesign:PackIcon>
 
-                    <materialDesign:PackIcon Style="{StaticResource IconStyle}" Tag="5.0" />
 
-                </Controls:DropDownButton.Items>
-            </Controls:DropDownButton>
+
+
+
+
+
+           
 
             <Border BorderBrush="Transparent" BorderThickness="0,0,0,3">
                 <Button

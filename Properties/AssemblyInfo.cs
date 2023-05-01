@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Warrior Media Telestrator")]
+[assembly: AssemblyTitle("NDI-Telestrator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Warrior Media Telestrator")]
+[assembly: AssemblyProduct("NDI-Telestrator")]
 [assembly: AssemblyCopyright("Copyright © 2023 Tj Doescher tj@dashfam.com")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

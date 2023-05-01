@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warrior Media Telestrator", "Warrior Media Telestrator.csproj", "{84ED7244-5644-4150-9349-A87E457763B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDI-Telestrator", "NDI-Telestrator.csproj", "{84ED7244-5644-4150-9349-A87E457763B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDILibDotNet2", "lib\NDILibDotNet2\NDILibDotNet2.csproj", "{7195BFA6-8095-4618-96F6-8577DB13FB43}"
 EndProject
