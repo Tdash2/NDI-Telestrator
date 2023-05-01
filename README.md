@@ -13,9 +13,11 @@ A application that lets you draw on an NDI sorce. It outputs just the ink to a N
 
 TODO
 -------
-* Add Vmix Replay shortcuts for play, pause, reverse and playback speed.
 * Make a wiki.
 
+In Progress
+-------
+* Add Vmix Replay shortcuts for play, pause, reverse and playback speed.
 
 
 Authors
